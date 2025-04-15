@@ -48,4 +48,9 @@ describe('deepEqual', () => {
     const arr2 = [{ a: 1 }, { b: 2 }];
     expect(deepEqual(arr1, arr2)).toBe(true);
   });
+
+  test('', () =>
+  {
+    expect(deepEqual([0, 1], {0: 0, 1: 1})).toBe(false);
+  });
 });
