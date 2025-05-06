@@ -1,8 +1,7 @@
 import { tasksReducer } from '../model/reducers.js';
-describe('business logic', () => {
+describe('businessLogic', () => {
   it('edit task', () => {
-    const state=[{id:1,text:'A'}];
-    const next=tasksReducer(state,{type:'EDIT_TASK',payload:{id:1,text:'B'}});
-    expect(next[0].text).toBe('B');
+    const s=[{id:1,text:'A'}]; const n=tasksReducer(s,{type:'EDIT_TASK',payload:{id:1,text:'B'}});
+    expect(n[0].text).toBe('B');
   });
 });

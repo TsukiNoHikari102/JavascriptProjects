@@ -1,11 +1,18 @@
 import { defineConfig } from 'vite';
+
 export default defineConfig({
   root: './src',
   build: {
     outDir: '../dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: './src/index.html' 
+    }
   },
   server: {
-    open: true
+    open: true,
+  },
+  optimizeDeps: {
+    include: []  
   }
 });

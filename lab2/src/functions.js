@@ -58,3 +58,26 @@
 
   })();
 
+  if (originalFunc.prototype) {
+    boundFunction.prototype = Object.create(originalFunc.prototype);
+    Object.defineProperty(boundFunction.prototype, 'constructor', {
+      value: boundFunction,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    });
+  }
+
+  const originalLength = Math.max(0, originalFunc.length - boundArgs.length);
+  Object.defineProperty(boundFunction, 'length', {
+    value: originalLength,
+    writable: false,
+    configurable: true
+  });
+
+  const boundName = originalFunc.name ? 'bound ' + originalFunc.name : 'bound';
+  Object.defineProperty(boundFunction, 'name', {
+    value: boundName,
+    writable: false,
+    configurable: true
+  });
