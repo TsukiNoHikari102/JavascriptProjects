@@ -1,4 +1,5 @@
 export default {
-    transform: {},
-    testEnvironment: 'jsdom',
-  };
+  transform: {},
+  moduleNameMapper: {},
+  testEnvironment: 'jsdom',
+};
