@@ -1,0 +1,49 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+img {
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.arrow {
+  font-size: 32px;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.slider-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  input[type='range'] {
+    width: 100%;
+    height: 8px;
+  }
+}
